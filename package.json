@@ -1,0 +1,46 @@
+{
+  "name": "university-eval",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts",
+    "start:watch": "nodemon -x npm start",
+    "start:debug": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+    "start:debug:watch": "nodemon -x npm run start:debug"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.161",
+    "@types/node": "^14.6.4",
+    "@types/pg": "^7.14.4",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20",
+    "pg": "^8.3.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts"
+    ],
+    "watch": [
+      "src"
+    ],
+    "ext": "ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rederlyhq/university-eval.git"
+  },
+  "author": "Rederly",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/rederlyhq/university-eval/issues"
+  },
+  "homepage": "https://github.com/rederlyhq/university-eval#readme"
+}
